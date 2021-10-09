@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body {
+	min-height: 100%;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: #1d4bd2b0;
+	height: 100vh;
+}
+
+header {
+	text-align: center;
+	background-color: #b4bab5;
+	width: 100%;
+}
+
+#title {
+    color:red;
+}
+#email , #hours {
+ font-size: 30px;	
+ font-weight: bold;
+}
+
+#number {
+	color: green;
+}
+
+
+nav {
+    background-color: #85a59c;
+    text-align: center;
+
+}
+#links {
+  list-style-type: none;
+  margin: 6px;
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+#nav-links {
+	font-size: 2em;
+}
+#nav-links a {
+	text-decoration: none;
+	color: black;
+	margin: 30px;
+}
+
+section {
+	border: 5px solid beige;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 60%;
+	padding: 20px;
+	margin-bottom: auto;
+}
+.form-group {
+	margin-bottom: 1rem;
+	display: inline-flex;
+}
+
+
