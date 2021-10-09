@@ -7,67 +7,48 @@
     <title>Employee Manager</title>
     <link rel="stylesheet" type="text/css" href='{% static "/css/home.css" %}?{% now "U" %}'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <!--insert logo and flex the left -->
-        <h1 id="title">My Garden Employee Resource Manager</h1>
-        <a id="email" href="webmaster@example.com">test_email@gmail.com</a>
-        <p id="hours">Office Hours: Mon - Fri 5:00pm - 11:00pm</p>
-        <h1 id="number" style="bold">(480) 552-8961</h1>
-    </header>
-    <nav>
-        <ul id="links">
-            <li id="nav-links"><a href="#home">Home</a></li>
-            <li id="nav-links"><a href="#news">Employees</a></li>
-            <li id="nav-links"><a href="#contact">Jobs</a></li>
-            <li id="nav-links"><a href="#about">About</a></li>
-        </ul>
-    </nav>
+<header>
+    <!--insert logo and flex the left -->
+    <h1 id="title">My Garden Employee Resource Manager</h1>
+    <a id="email" href="webmaster@example.com">test_email@gmail.com</a>
+    <p id="hours">Office Hours: Mon - Fri 5:00pm - 11:00pm</p>
+    <h1 id="number" style="bold">(480) 552-8961</h1>
+</header>
+<nav>
+    <ul id="links">
+        <li id="nav-links"><a href="/home">Home</a></li>
+        <li id="nav-links"><a href="/employee">Employees</a></li>
+        <li id="nav-links"><a href="#contact">Jobs</a></li>
+        <li id="nav-links"><a href="#about">About</a></li>
+    </ul>
+</nav>
 
-    <section>
-        <h2>Employees</h2>
-        <p >Displays employee data</p>
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-            </tr>
-            <!-- Form -->
-            <form class="form-inline">
-                <div class="form-group">
-                    <label for="exampleInputName2" style="margin: 5px;">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2" style="margin: 5px;">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="MyGardenLandscaping@example.com">
-                </div>
-                <button type="submit" class="btn btn-primary" style="margin-left: 20px;">Add Employee</button>
-            </form>
-			<!-- End Form -->
-            </thead>
-            <tbody>
-            <tr>
-                <td>Cindy</td>
-                <td>Zaldana</td>
-                <td>john@example.com</td>
-            </tr>
-            <tr>
-                <td>Monica</td>
-                <td>Cruz</td>
-                <td>mary@example.com</td>
-            </tr>
-            <tr>
-                <td>Morro</td>
-                <td>Saldana</td>
-                <td>july@example.com</td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
+<section>
+    {% block content %}
+    <h2>Employees</h2>
+    <p>Displays employee data</p>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for e in employees %}
+        <tr>
+            <td>{{e.first_name}}</td>
+            <td>{{e.last_name}}</td>
+            <td>{{e.email}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
+</section>
 </body>
 </html>
