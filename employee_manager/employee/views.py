@@ -1,8 +1,10 @@
 from django.shortcuts import render
-
+from .forms import EmployeeForm
 
 
 # Create your views here.
 
 def employee(request):
-    return render(request, "employee.html")
+    form = EmployeeForm()
+
+    return render(request, "employee.html", {'form': form})

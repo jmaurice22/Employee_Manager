@@ -1,5 +1,10 @@
 {% extends "home.html" %}
 
+{%load crispy_forms_tags %}
+
 {% block content %}
     <p>Your inside the block content</p>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <a class="btn btn-success">Add</a>
 {% endblock %}
