@@ -8,3 +8,6 @@ def employee(request):
     form = EmployeeForm()
 
     return render(request, "employee.html", {'form': form})
+
+def employee_registration(request):
+    return render(request, "employee_registration.html")

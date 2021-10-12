@@ -53,15 +53,24 @@ nav {
 
 section {
 	border: 5px solid beige;
-	margin-top: auto;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: 100px;
+	margin-left: 30%;
+	margin-right: 30%;
 	padding: 20px;
 	margin-bottom: auto;
+	min-width: 50%;
 }
-.form-group {
-	margin-bottom: 1rem;
-	display: inline-flex;
+
+#registrationForm {
+  text-align: center;
 }
 
 
+
+#formFields {
+    padding: 50px;
+	display: block;
+	box-sizing: border-box;
+	text-align: left;
+    line-height: 1.6;
+}
