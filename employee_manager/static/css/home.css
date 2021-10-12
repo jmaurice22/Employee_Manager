@@ -52,14 +52,16 @@ nav {
 }
 
 section {
-	border: 5px solid beige;
+	border: 5px solid #0e1952;
 	margin-top: 100px;
-	margin-left: 30%;
-	margin-right: 30%;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 20px;
 	margin-bottom: auto;
-	min-width: 50%;
+	/*! min-width: ; */
+	/*! max-width: 1024px; */
 }
+
 
 #registrationForm {
   text-align: center;

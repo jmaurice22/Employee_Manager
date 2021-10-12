@@ -9,5 +9,10 @@ def employee(request):
 
     return render(request, "employee.html", {'form': form})
 
+
 def employee_registration(request):
     return render(request, "employee_registration.html")
+
+#TODO: create a view to add new employee from form
+
+

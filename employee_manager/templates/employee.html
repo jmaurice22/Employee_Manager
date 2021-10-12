@@ -3,5 +3,12 @@
 {%load crispy_forms_tags %}
 
 {% block content %}
-<p>On employee registration form</p>
+<div id="regForm" >
+    <h2>Employee Registraion</h2>
+    <form method='POST' action=''>
+        {% csrf_token %}
+        {{ form|crispy }}
+    </form>
+    <button class="btn btn-success" style="    display: block; float: right;}">Save</button>
+</div>
 {% endblock %}
