@@ -30,7 +30,8 @@ header {
 
 
 nav {
-    background-color: #85a59c;
+    background: rgb(204,208,200);
+    background: linear-gradient(240deg, rgba(204,208,200,1) 0%, rgba(77,81,89,1) 98%, rgba(42,53,52,1) 100%);
     text-align: center;
 
 }
@@ -52,16 +53,27 @@ nav {
 }
 
 section {
-	border: 5px solid beige;
-	margin-top: auto;
+	border: 5px solid #0e1952;
+	margin-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 20px;
 	margin-bottom: auto;
-}
-.form-group {
-	margin-bottom: 1rem;
-	display: inline-flex;
+	/*! min-width: ; */
+	/*! max-width: 1024px; */
 }
 
 
+#registrationForm {
+  text-align: center;
+}
+
+
+
+#formFields {
+    padding: 50px;
+	display: block;
+	box-sizing: border-box;
+	text-align: left;
+    line-height: 1.6;
+}

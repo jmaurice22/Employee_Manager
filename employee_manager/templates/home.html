@@ -10,17 +10,17 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<header>
-    <!--insert logo and flex the left -->
+<!--<header>
+    &lt;!&ndash;insert logo and flex the left &ndash;&gt;
     <h1 id="title">My Garden Employee Resource Manager</h1>
     <a id="email" href="webmaster@example.com">test_email@gmail.com</a>
     <p id="hours">Office Hours: Mon - Fri 5:00pm - 11:00pm</p>
     <h1 id="number" style="bold">(480) 552-8961</h1>
-</header>
+</header>-->
 <nav>
     <ul id="links">
         <li id="nav-links"><a href="/home">Home</a></li>
-        <li id="nav-links"><a href="/employee">Employees</a></li>
+        <li id="nav-links"><a href="/employee/employee_registration">Employees</a></li>
         <li id="nav-links"><a href="#contact">Jobs</a></li>
         <li id="nav-links"><a href="#about">About</a></li>
     </ul>
@@ -28,14 +28,15 @@
 
 <section>
     {% block content %}
-    <h2>Employees</h2>
+    <h2>Employee Contact Information</h2>
     <a class="btn btn-primary" href="/employee" style="float: right;">Add Employee</a>
     <p>{{date}}</p>
     <table class="table">
         <thead class="thead-dark">
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Phone</th>
             <th>Email</th>
         </tr>
         </thead>
@@ -44,13 +45,18 @@
         <tr>
             <td>{{e.first_name}}</td>
             <td>{{e.last_name}}</td>
-            <td>{{e.email}}</td>
+            <!-- todo: add phone field to template-->
+            <td>7326183815</td>
+            <td>{{e.email}} &nbsp;
+                <!-- todo: add path to delete employee view to the button-->
+                <button class="btn btn-danger" style="float:right;">Delete</button>
+            </td>
         </tr>
         {% endfor %}
         </tbody>
     </table>
     {% endblock %}
 </section>
- <script src="/static/images/app.js"></script>
+<script src="/static/images/app.js"></script>
 </body>
 </html>
