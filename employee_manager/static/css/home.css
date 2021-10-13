@@ -6,8 +6,11 @@ body {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
-	background-color: #1d4bd2b0;
+	/*! background-color: #1d4bd2b0; */
 	height: 100vh;
+	/*! margin-left: auto; */
+	/*! margin-right: auto; */
+	padding: ;
 }
 
 header {
@@ -59,8 +62,10 @@ section {
 	margin-right: auto;
 	padding: 20px;
 	margin-bottom: auto;
+	display: inline-block;
 	/*! min-width: ; */
 	/*! max-width: 1024px; */
+	margin: 0 10% 0 10%;
 }
 
 
