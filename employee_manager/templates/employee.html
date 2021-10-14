@@ -1,12 +1,14 @@
 {% extends "home.html" %}
 
+{% block title %} <title>Employee Registration</title> {% endblock %}
+<!-- todo: style form using bootstrap classes/layout -->
 {% block content %}
 <div id="regForm">
     <h2>Employee Registration</h2>
     <form method='POST' action='/employee/employee'>
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" style="display: block; float: right;}" value="Save"/>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 {% endblock %}
