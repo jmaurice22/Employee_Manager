@@ -8,4 +8,5 @@ class EmployeeForm(forms.ModelForm):
         model = Employee
         fields = '__all__'
 
+
 # todo: add widgets dictionary to style form fields
