@@ -40,10 +40,13 @@ INSTALLED_APPS = [
     'home',
     'employee',
     'crispy_forms',
+    'phonenumber_field',
     
 ]
 
-CRISPY_TEMPLATE_PACK = 'uni_form'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+PHONENUMBER_DEFAULT_REGION = 'US'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
