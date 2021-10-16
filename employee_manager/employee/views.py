@@ -11,7 +11,7 @@ def employee(request):
         form.save()
         return redirect('/home')
 
-    return render(request, "employee.html", {'form': form})
+    return render(request, "employee_contact.html", {'form': form})
 
 
 def employee_registration(request):
