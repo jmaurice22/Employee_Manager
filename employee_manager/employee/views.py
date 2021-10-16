@@ -17,4 +17,4 @@ def employee(request):
 def employee_registration(request):
     return render(request, "employee_registration.html")
 
-# Todo: create a view to delete selected employee by <id> & redirect
+
