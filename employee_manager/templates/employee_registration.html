@@ -1,8 +1,9 @@
 {% extends "home.html" %}
+{% load static %}
 <!--todo: fix page routing to match page title/content -->
 {% block title %} <title>Employees</title> {% endblock %}
 {% block extra_head_content  %}
-        <link
+<link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
         rel="stylesheet"
 />
@@ -21,30 +22,29 @@
     <a class="btn btn-primary btn-lg" href="#">Request New Supplies</a>
     <a class="btn btn-primary btn-lg" href="#">Request Time Off</a>
 </div>
-   <div class="container">
-      <div class="calendar">
+<div class="container">
+    <div class="calendar">
         <div class="month">
             <!-- todo: change button to be an icon (font awesome) or button  -->
-          <button class=" btn btn-success btn-lg prev"></button>
-          <div class="date">
-            <h1></h1>
-            <p></p>
-          </div>
-          <i class="fas fa-angle-right next" id="next"></i>
+            <button class=" btn btn-success btn-lg prev">PREV</button>
+            <div class="date">
+                <h1></h1>
+                <p></p>
+            </div>
+            <button class=" btn btn-success btn-lg next" id="next">NEXT</button>
         </div>
         <div class="weekdays">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
         </div>
         <div class="days"></div>
-      </div>
     </div>
 </div>
-<script type="text/javascript" src="/static/js/cal.js"></script>
-
+<script src="{% static 'js/cal.js' %}"></script>
+</div>
 {% endblock %}
