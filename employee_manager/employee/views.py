@@ -18,3 +18,5 @@ def employee_registration(request):
     return render(request, "employee_registration.html")
 
 
+def request_time_off(request):
+    return render(request, 'request_time_off.html')
