@@ -1,3 +1,5 @@
+from django.db.models.base import Model
+from django.http import request
 from django.shortcuts import render, redirect, get_object_or_404
 from employee.models import Employee
 import datetime
@@ -20,5 +22,6 @@ def delete_employee(request, id):
     if request.method == 'POST':
         employee.delete()
         return redirect('/home')
+
 
 

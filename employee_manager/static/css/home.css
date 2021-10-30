@@ -96,14 +96,14 @@ section {
 .calendar {
   width: 45rem;
   height: 52rem;
-  background-color: #222227;
+  background-color: #0f3970d1;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
 .month {
   width: 100%;
   height: 12rem;
-  background-color: blue;
+  background-color: #474f4c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,6 +115,7 @@ section {
 .month i {
   font-size: 2.5rem;
   cursor: pointer;
+  display
 }
 
 .month h1 {
@@ -129,12 +130,18 @@ section {
   font-size: 1.6rem;
 }
 
+.month button {
+  font-size: 1.6rem;
+}
+
+
 .weekdays {
   width: 100%;
   height: 5rem;
   padding: 0 0.4rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .weekdays div {
@@ -153,6 +160,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   padding: 0.2rem;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .days div {

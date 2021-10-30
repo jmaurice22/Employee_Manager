@@ -41,12 +41,15 @@ INSTALLED_APPS = [
     'employee',
     'crispy_forms',
     'phonenumber_field',
+
+
     
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 PHONENUMBER_DEFAULT_REGION = 'US'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
