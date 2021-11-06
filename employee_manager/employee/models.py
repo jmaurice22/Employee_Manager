@@ -1,6 +1,7 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
+
 # Create your models here.
 class Employee(models.Model):
     first_name = models.CharField(max_length=30)
@@ -13,3 +14,10 @@ class Employee(models.Model):
         return self.last_name
         return self.email
         return self.phone_number
+
+
+class leaveDate(models.Model):
+    start_date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.start_date
