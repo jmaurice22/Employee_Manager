@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import EmployeeForm
-from .models import Employee
+from .forms import EmployeeForm, leaveForm
+from .models import Employee, leaveDate
 
 
 # Create your views here.
@@ -19,4 +19,8 @@ def employee_registration(request):
 
 
 def request_time_off(request):
-    return render(request, 'request_time_off.html')
+
+    #new leave instance form
+    form = leaveForm()
+
+    return render(request, 'request_time_off.html', {'form': form})
