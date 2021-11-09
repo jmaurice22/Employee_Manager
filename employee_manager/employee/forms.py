@@ -19,5 +19,6 @@ class EmployeeForm(forms.ModelForm):
 
 class leaveForm(forms.Form):
     start_date = forms.DateField(initial=datetime.date.today)
-    end_date = forms.DateField(initial=datetime.date.today() + datetime.timedelta(days=1))
+    end_date = forms.DateField(
+        initial=datetime.date.today() + datetime.timedelta(days=1))
     comment = forms.CharField(widget=forms.Textarea)
