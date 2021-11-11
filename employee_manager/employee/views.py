@@ -19,8 +19,9 @@ def employee_registration(request):
 
 
 def request_time_off(request):
-
-    #new leave instance form
-    form = leaveForm()
+    form = leaveForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('/home')
 
     return render(request, 'request_time_off.html', {'form': form})
