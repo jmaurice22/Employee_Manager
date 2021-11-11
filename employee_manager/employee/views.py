@@ -15,7 +15,8 @@ def employee(request):
 
 
 def employee_registration(request):
-    return render(request, "employee_registration.html")
+    requests = leaveDate.objects.all()
+    return render(request, "employee_registration.html", {'requests': requests})
 
 
 def request_time_off(request):

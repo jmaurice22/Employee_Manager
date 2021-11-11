@@ -20,9 +20,15 @@
 <div align="center" class="container-md" style="margin-top:100px;">
     <a class="btn btn-outline-secondary" href="employee/request_time_off">Request Time Off</a>
     <a class="btn btn-outline-secondary" href="#">Request New Supplies</a>
-
 </div>
-
-
-
+<div>
+    <h3>Leave requests</h3>
+</div>
+<div>
+    <ul>
+    {%  for r in requests %}
+        <li>{{r.comments}}</li>
+    {%  endfor    %}
+    </ul>
+</div>
 {% endblock %}
