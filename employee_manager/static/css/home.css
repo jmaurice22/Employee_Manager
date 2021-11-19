@@ -40,22 +40,26 @@ nav {
 
 section {
 	border: 5px solid #0e1952;
-	margin-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 20px;
 	margin-bottom: auto;
 	display: inline-block;
-	/*! min-width: ; */
-	/*! max-width: 1024px; */
-	margin: 0 10% 0 10%;
+	margin: 5% 10% 0 10%;
+	background-color: #fff;
 }
 
 
-#registrationForm {
-  text-align: center;
+section div.form-group {
+
 }
 
+label {
+	display: inline-block;
+	margin-bottom: .5rem;
+	font-size: 18pt;
+	font-weight: bold;
+}
 
 
 #formFields {
@@ -67,18 +71,18 @@ section {
 }
 
 /* ===========================================  */
-.container {
+/*.container {
   width: 100%;
   height: 100vh;
   color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+}*/
 
 #form-container {
-    margin-left: 30% ;
-    margin-right: 30% ;
+    margin-left: 0;
+
 
 }
 
@@ -92,3 +96,8 @@ section {
     margin-top:30px;
     padding: 0;
 }
+
+span.asteriskField {
+    display: none;
+}
+div#

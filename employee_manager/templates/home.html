@@ -20,6 +20,8 @@
     <script src=
                     "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
     </script>
+
+
 </head>
 <body style="background-color: #6d918a;">
     <nav>
@@ -33,7 +35,9 @@
     <section>
         {% block content %}
         <h1 id="hp_title">Employee Contact Information</h1>
-        <a class="btn btn-primary btn-lg" href="/employee" style="float: right; margin-bottom: 10px;;">Add Employee</a>
+        <a class="btn btn-primary btn-lg" href="/employee" style="float: right; margin: 10px;;">Add Employee</a>
+        <a class="btn btn-primary btn-lg"  href="employee/request_time_off" style="float: right; margin: 10px;;">Request Time Off</a>
+<!--        <a class="btn btn-primary btn-lg"  style="float: right; margin: 10px;;">Request New Supplies</a>-->
         <p id="date_today">{{date}}</p>
         <table class="table">
             <thead class="thead-dark">
