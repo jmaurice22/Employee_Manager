@@ -3,7 +3,7 @@
 {% block title %} <title>Contact Information</title> {% endblock %}
 {% block content %}
 <div class="form-group">
-    <h2>Employee Registration</h2>
+    <h2 style="color: white">Employee Registration</h2>
     <form method='POST' action='/employee/employee'>
         {% csrf_token %}
         {{ form|crispy }}

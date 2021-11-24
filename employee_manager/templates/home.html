@@ -5,64 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% block title %} <title>Employee Manager</title> {% endblock %}
-    <link rel="stylesheet" type="text/css" href='{% static "/css/home.css" %}?{% now "U" %}'>
+    <link rel="stylesheet"  href='{% static "/css/home.css" %}?{% now "U" %}'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-        <link href=
-'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css'
+    <link href=
+                  'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css'
           rel='stylesheet'>
 
     <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" >
+                    "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>
 
     <script src=
-"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" >
+                    "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
     </script>
-</head>
-<body>
-    <nav>
-        <ul id="links">
-            <li class="nav-item"><a style="color:white; font-size: 2em;" class="nav-link" href="/home">Home</a></li>
-            <li class="nav-item"><a style="color:white; font-size: 2em;" class="nav-link" href="/employee/employee_registration">Employees</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact" style="color:white; font-size: 2em;">Jobs</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about" style="color:white; font-size: 2em;">About</a></li>
-        </ul>
-    </nav>
 
-    <section>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quando&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: black; font-family: 'Quando', serif;">
+<nav>
+    <ul id="links">
+        <li class="nav-item">
+            <a style="color:white; font-size: 2em;" class="nav-link" href="/home">Home</a></li>
+        <li class="nav-item"><a style="color:white; font-size: 2em;" class="nav-link"
+                                href="/employee/employee_registration">Employees</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" style="color:white; font-size: 2em;">About</a></li>
+    </ul>
+</nav>
+
+<section>
+    <div class="container">
         {% block content %}
         <h1 id="hp_title">Employee Contact Information</h1>
-        <a class="btn btn-primary btn-lg" href="/employee" style="float: right; margin-bottom: 10px;;">Add Employee</a>
+        <a class="btn btn-primary btn-lg" href="/employee" style="float: right; margin: 10px;;">Add Employee</a>
+        <a class="btn btn-primary btn-lg" href="employee/request_time_off" style="float: right; margin: 10px;;">Request Time
+            Off</a>
+        <!--        <a class="btn btn-primary btn-lg"  style="float: right; margin: 10px;;">Request New Supplies</a>-->
         <p id="date_today">{{date}}</p>
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Phone</th>
-                <th>Email</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for e in employees %}
-            <tr>
-                <td>{{e.first_name}}</td>
-                <td>{{e.last_name}}</td>
-                <td>{{e.phone_number}}</td>
-                <td>{{e.email}} &nbsp;
-                    <form method="POST" action="/home/delete_employee/{{e.id}}">
-                        {% csrf_token %}
-                        <input class="btn btn-danger" type="submit" style="float:right;" value="Delete" />
-                    </form>
-                </td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-        {% endblock %}
-    </section>
+        <div class="container">
+            <table class="table">
+                <thead class="bg-success">
+                    <tr>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for e in employees %}
+                <tr>
+                    <td>{{e.first_name}}</td>
+                    <td>{{e.last_name}}</td>
+                    <td>{{e.phone_number}}</td>
+                    <td>{{e.email}} &nbsp;
+                        <form method="POST" action="/home/delete_employee/{{e.id}}">
+                            {% csrf_token %}
+                            <input class="btn btn-danger" type="submit" style="float:right;" value="Delete"/>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% endblock %}
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

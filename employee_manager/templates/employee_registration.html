@@ -17,17 +17,14 @@
 <!--todo/html: display options to log/view hours .
     todo: leave comments
     todo: request time off -->
-<div align="center" class="container-md" style="margin-top:100px;">
-    <a class="btn btn-outline-secondary" href="employee/request_time_off">Request Time Off</a>
-    <a class="btn btn-outline-secondary" href="#">Request New Supplies</a>
-</div>
 <div>
-    <h3>Leave requests</h3>
+    <h3 id="leave-request-title" align="center">Leave Requests</h3>
 </div>
-<div>
-    <ul>
+<div id="leave-list-container" align="center">
+    <ul id="leave-list">
     {%  for r in requests %}
-        <li>{{r.comments}}</li>
+        <!--todo: add links to show each request-->
+        <li>{{r.comments}}</a></li>
     {%  endfor    %}
     </ul>
 </div>
