@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 body {
 	min-height: 100%;
 	width: 100%;
@@ -8,12 +7,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: #96a396ab;
+
 
 }
-
-
-
 
 nav {
     background: #000000;
@@ -87,6 +83,9 @@ table tr {
 
 }
 
+table tr td {
+    color:#174212;
+}
 .table thead th {
     color: white;
 }
@@ -109,14 +108,6 @@ label {
 }
 
 /* ===========================================  */
-/*.container {
-  width: 100%;
-  height: 100vh;
-  color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
 
 #form-container {
     margin-left: 0;
