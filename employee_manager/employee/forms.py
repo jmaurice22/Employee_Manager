@@ -21,7 +21,7 @@ class leaveForm(forms.ModelForm):
     class Meta:
         model = leaveDate
         fields = '__all__'
-    start_date = forms.DateField(initial=datetime.date.today)
-    end_date = forms.DateField(
-        initial=datetime.date.today() + datetime.timedelta(days=1))
+        start_date = forms.DateField(initial=datetime.date.today)
+        end_date = forms.DateField(
+         initial=datetime.date.today() + datetime.timedelta(days=1))
 

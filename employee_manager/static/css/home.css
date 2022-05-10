@@ -65,9 +65,14 @@ section {
     
 }
 
-#hp_title, #date_today {
+#hp_title {
     padding-top: 2px;
     color: white;
+    text-align: center;
+}
+
+#date_today {
+    font-size:xx-large;
 }
 
 .table {
