@@ -65,20 +65,26 @@ section {
     
 }
 
+#emp_options {
+    display: flex;
+    flex-direction: column;
+   
+}
+
 #hp_title {
-    padding-top: 2px;
-    color: white;
+    /* padding-top: 2px; */
+    color: azure;
     text-align: center;
 }
 
 #date_today {
-    font-size:xx-large;
+    color: azure;
 }
 
 .table {
     background-color: #f2eff7;
-    border: 1px solid black;
-    box-shadow: 3px 10px 10px 0 #888888;
+    border-collapse: collapse;
+    
 }
 
 
@@ -88,8 +94,14 @@ table tr {
 
 }
 
+tbody > tr > td {
+
+    border-bottom: 4px #000000;
+}
+
 table tr td {
     color:#174212;
+    border-bottom: 2px black;
 }
 .table thead th {
     color: white;
