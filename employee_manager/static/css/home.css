@@ -142,6 +142,13 @@ label {
     padding: 0;
 }
 
+.registation-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20px;
+}
+
 span.asteriskField {
     display: none;
 }

@@ -1,19 +1,20 @@
-{% extends "home.html" %}
+{% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block title %} <title>Contact Information</title> {% endblock %}
 {% block content %}
-<div class="form-group">
-    <h2 style="color: white">Employee Registration</h2>
-    <form method='POST' action=''>
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-    <!-- todo: create a separate js file to add form styling -->
-    <script>
-
-        document.getElementById('id_email').placeholder = "example@gmail.com";
-        document.getElementById('id_phone_number').placeholder = "(555)-218-6253";
-    </script>
+<div class="registation-container">
+<h2 style="color: white">Employee Registration</h2>
+<div class="form-group" style=" display:flex; align-items:center;">
+        <form method='POST' action=''>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <!-- todo: create a separate js file to add form styling -->
+        <script>
+            document.getElementById('id_email').placeholder = "example@gmail.com";
+            document.getElementById('id_phone_number').placeholder = "(555)-218-6253";
+        </script>
+    </div>
 </div>
 {% endblock %}
