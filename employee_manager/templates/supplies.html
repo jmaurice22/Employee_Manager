@@ -1,10 +1,19 @@
-{% extends "home.html" %}
+{% extends "base.html" %}
 {% block title %} <title>Supply Information</title> {% endblock %}
 {% block content %}
-<ul>
-    <li>item</li>
-    <li>item</li>
-    <li>item</li>
-    <li>item</li>
-</ul>
+<div class="supplycard-container">
+    <div class="supply-items-list">
+        <h1>Hello World!</h1>
+        {% for s in supplies %}
+            <ul>
+                <li>{{ s.name }}</li>
+                {% comment %} {% comment %} <li>{{ s.description }}</li>
+                <li>{{ s.quantity }}</li>
+                <li>{{ s.price }}</li> {% endcomment %}
+            </ul>
+        {% endfor %}
+
+    </div>
+  
+</div>
 {% endblock %}

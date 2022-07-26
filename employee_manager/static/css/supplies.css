@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+.supply-items-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: auto;
+    border: 10px solid white;
+    overflow-y: auto;
+}

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% block title %} <title>Employee Manager</title> {% endblock %}
     <link rel="stylesheet" href='{% static "/css/home.css" %}?{% now "U" %}'>
+    <link rel="stylesheet" href='{% static "/css/supplies.css" %}?{% now "U" %}'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -41,7 +42,7 @@
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 <a class="nav-link" href="/employee/employee_registration">Employees</a>
-                <a class="nav-link" href="#">Supplies</a>
+                <a class="nav-link" href="/supplies">Supplies</a>
                 <a class="nav-link" href="/about">About</a>
             </div>
         </div>
