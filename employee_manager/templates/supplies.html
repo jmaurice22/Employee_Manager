@@ -1,19 +1,29 @@
 {% extends "base.html" %}
 {% block title %} <title>Supply Information</title> {% endblock %}
 {% block content %}
-<div class="supplycard-container">
+<div class="container-sm">
     <div class="supply-items-list">
-        <h1>Hello World!</h1>
         {% for s in supplies %}
-            <ul>
-                <li>{{ s.name }}</li>
-                {% comment %} {% comment %} <li>{{ s.description }}</li>
-                <li>{{ s.quantity }}</li>
-                <li>{{ s.price }}</li> {% endcomment %}
-            </ul>
+        <div class="card" style="width: 18rem; margin:20px;">
+            <div class="card-body">
+                    <h5 class="card-title">{{ s.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ s.price }}</h6>
+                    <p class="card-text">{{ s.description }}</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
         {% endfor %}
-
     </div>
-  
+    <div class="add-sup">
+        <h1>Add Supply</h1>
+        <form action="/addsupplies" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="quantity" placeholder="Quantity">
+            <input type="text" name="price" placeholder="Price">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+
 </div>
 {% endblock %}

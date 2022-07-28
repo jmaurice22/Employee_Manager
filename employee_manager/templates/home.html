@@ -12,8 +12,9 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction:column;
-                background-color: rgb(123, 132, 132);"
-        >
+                max-height: 50vh;
+                overflow-y: auto;
+                background-color: rgb(123, 132, 132);">
             <h1 id="date_today">{{date}}</h1>
             <div id="emp_options">
                 <div style="display: flex; flex-direction: row; margin: 5px;">
@@ -64,6 +65,28 @@
                 {% endfor %}
                 </tbody>
             </table>
+        </div>
+    </
+    >
+    <div>
+        <div class="container">
+            <div class="sup-list">
+                <div>
+                    <h1 class="supply-list-header">Supply List</h1>
+                    <ul>
+                        {% for s in supplies %}
+                        <li>{{s.name}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <h1>Vacation</h1>
+                    <ul>
+                        {% for v in leave_requests %}
+                        <li>{{v.comments}}</li>
+                        {% endfor %}
+                    </ul>
+            </div>
         </div>
     </div>
 </div>

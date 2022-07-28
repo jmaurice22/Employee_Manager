@@ -3,8 +3,6 @@ from .forms import EmployeeForm, leaveForm
 from .models import Employee, leaveDate
 
 
-# Create your views here.
-
 def employee(request):
     form = EmployeeForm(request.POST or None)
     if form.is_valid():

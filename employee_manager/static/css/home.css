@@ -12,18 +12,11 @@ body {
 }
 
 nav {
-    background: #000000;
-    text-align: center;
+
+
 
 }
-#links {
-  list-style-type: none;
-  margin: 6px;
-  padding: 0;
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-}
+
 
 div#div_id_first_name label {
     color: white;
@@ -33,14 +26,8 @@ div#div_id_start_date label {
     color: white;
 }
 
-#nav-links {
-	font-size: 2em;
-}
-#nav-links a {
-	text-decoration: none;
-	color: black;
-	margin: 30px;
-}
+
+
 
 section {
 	border: 2px solid rgb(233, 227, 229);
@@ -156,4 +143,21 @@ span.asteriskField {
 .container {
     padding: 10px;
     
+}
+
+.sup-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sup-list h1 {
+    color: azure;
+}
+
+.sup-list li {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    color:azure;
 }

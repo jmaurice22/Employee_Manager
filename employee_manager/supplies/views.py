@@ -7,3 +7,6 @@ from .models import SupplyItem
 def supplies(request):
     supplies = SupplyItem.objects.all()
     return render(request, 'supplies.html', {'supplies': supplies})
+
+def add_supply(request):
+    return render(request, 'supplies.html')
