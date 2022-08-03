@@ -1,29 +1,58 @@
-{% extends "base.html" %}
-{% block title %} <title>Supply Information</title> {% endblock %}
+{% extends "base.html" %} 
+{% block title %} <title>Supply Information</title> {%endblock %} 
 {% block content %}
-<div class="container-sm">
-    <div class="supply-items-list">
-        {% for s in supplies %}
-        <div class="card" style="width: 18rem; margin:20px;">
-            <div class="card-body">
-                    <h5 class="card-title">{{ s.name }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ s.price }}</h6>
-                    <p class="card-text">{{ s.description }}</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
-        {% endfor %}
+<h3>Add Supply</h3>
+<div class="form-container">
+  <form action="/supplies/add_supply" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name" style="color: azure">Name</label>
+      <input type="text" class="form-control" name="name" placeholder="Name" />
     </div>
-    <div class="add-sup">
-        <h1>Add Supply</h1>
-        <form action="/addsupplies" method="POST">
-            <input type="text" name="name" placeholder="Name">
-            <input type="text" name="quantity" placeholder="Quantity">
-            <input type="text" name="price" placeholder="Price">
-            <input type="submit" value="Add">
-        </form>
+    <div class="form-group">
+      <label for="price" style="color: azure">Price</label>
+      <input
+        type="text"
+        class="form-control"
+        name="price"
+        placeholder="Price"
+      />
     </div>
+    <div class="form-group">
+      <label for="description" style="color: azure">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        name="description"
+        placeholder="Description"
+      />
+    </div>
+    <div class="form-group">
+      <label for="quantity" style="color: azure">Quantity</label>
+      <input
+        type="text"
+        class="form-control"
+        name="quantity"
+        placeholder="Quantity"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <img src="../static/assets/supplies.jfif" />
+</div>
 
+<h3>Inventory</h3>
+<div class="supply-items-list">
+  {% for s in supplies %}
+  <div class="card" style="width: 18rem; margin: 20px">
+    <div class="card-body">
+      <h5 class="card-title">{{ s.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ s.price }}</h6>
+      <p class="card-text">{{ s.description }}</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}

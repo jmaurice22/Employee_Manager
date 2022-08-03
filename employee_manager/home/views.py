@@ -24,7 +24,6 @@ def home(request):
 
 def delete_employee(request, id):
     employee = get_object_or_404(Employee, id=id)
-
     if request.method == 'POST':
         employee.delete()
         return redirect('/home')

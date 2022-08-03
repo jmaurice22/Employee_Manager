@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render,redirect
+
+from .forms import SupplyItemForm
 
 from .models import SupplyItem
 
@@ -9,4 +12,8 @@ def supplies(request):
     return render(request, 'supplies.html', {'supplies': supplies})
 
 def add_supply(request):
-    return render(request, 'supplies.html')
+    form = SupplyItemForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('/supplies')     
+    return HttpResponse('Add Supply')
